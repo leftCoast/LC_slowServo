@@ -1,6 +1,6 @@
 # LC_slowServo
 
-So you want to set your servo speed and trying that with delay() is making everything else in your code stop?
+So you want to set your servo speed, and trying that with delay() is making everything else in your code stop?
 Here's the solution.
 
 1) Make sure LC_baseTools is installed on your machine using the Arduino Library manager.
