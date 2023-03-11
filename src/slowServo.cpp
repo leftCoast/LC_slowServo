@@ -50,3 +50,4 @@ void slowServo::idle(void) {
     degTimer.setTime(MsDelay,true);
   }
 }
+
