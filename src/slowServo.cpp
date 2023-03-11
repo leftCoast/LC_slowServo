@@ -40,7 +40,6 @@ void slowServo::setDeg(int inDeg) { desiredDeg = inDeg; }
 // called if begin is not called to set things up beforehand.
 void slowServo::idle(void) {
 
-
   if (currentDeg!=desiredDeg && degTimer.ding()) {
     if (currentDeg>desiredDeg) {
       currentDeg--;
