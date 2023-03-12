@@ -12,6 +12,6 @@ Here's the solution.
 7) To set speed, call the method myServo.setMsPerDeg(Ms); Your servo will delay this much time per degree movement. IE 0 means full blast.
 8) WARNING!!! DO NOT USE delay(); FOR ANYTHING! This WILL stop everything, no matter what. Replace your delay(); calls with sleep(); calls. This stops your main loop, but keeps the servos and everything else that runs in the background, running.
 9) You can call myServo.moving(); to see if your servo is moving or not.
-10) You can call myServo.stop(); To stop your servo.
+10) You can call myServo.stop(); to stop your servo.
 
 That's all there is to it.
