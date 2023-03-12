@@ -35,12 +35,20 @@ void slowServo::setMsPerDeg(int inMs) { MsDelay = inMs; }
 void slowServo::setDeg(int inDeg) { desiredDeg = inDeg; }
 
 
+// Are we moving?
+bool slowServo::moving(void) { return desiredDeg != currentDeg; } 
+
+
+// Stop this nonsense. Entering a new position starts it again.
+void slowServo::stop(void) { desiredDeg = currentDeg; }
+
+
 // Run the machine. This gets called automatically by the
 // idle(); command in your sketch's loop. It will NOT be
 // called if begin is not called to set things up beforehand.
 void slowServo::idle(void) {
 
-  if (currentDeg!=desiredDeg && degTimer.ding()) {
+  if (moving() && degTimer.ding()) {
     if (currentDeg>desiredDeg) {
       currentDeg--;
     } else {
@@ -50,4 +58,3 @@ void slowServo::idle(void) {
     degTimer.setTime(MsDelay,true);
   }
 }
-
