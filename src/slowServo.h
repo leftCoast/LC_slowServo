@@ -1,7 +1,12 @@
 #ifndef slowServo_h
 #define slowServo_h
 
-#include <Servo.h>
+#ifdef ESP32 || ESP8266		// If using ESP.. ESP use different servo library.
+#include <ESP32Servo.h>		// Their library. Same calls.
+#else								// else..
+#include <Servo.h>			// Ususal Arduino stuff.
+#endif							// ESP32
+
 #include <idlers.h>
 #include <timeObj.h>
 
