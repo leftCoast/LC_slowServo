@@ -15,3 +15,5 @@ Here's the solution.
 10) You can call myServo.stop(); to stop your servo.
 
 That's all there is to it.
+
+Here is a wokwi example : https://wokwi.com/projects/358434260375219201
