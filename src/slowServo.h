@@ -18,7 +18,7 @@
 class	slowServo :	public idler {
 
 	public:
-				slowServo(int inPin);
+				slowServo(int inPin,int startDeg=0);
 	virtual	~slowServo(void);
 
 				void  begin(void);
