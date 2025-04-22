@@ -5,7 +5,7 @@ Here's the solution.
 
 1) Make sure LC_baseTools as well as LC_slowServo are installed on your machine, **using the Arduino Library manager.**
 2) In your sketch add the line.. #include <slowServo.h>
-3) Instead of creating standard Arduino servo objects for your sketch, create slowServos. And when you create a slow servo, you need to give it a pin number. For example : slowServo myServo(2);
+3) Instead of creating standard Arduino servo objects for your sketch, create slowServos. And when you create a slow servo, you need to give it a pin number. For example : slowServo myServo(2); NEW : You can add a start angle to this if you like.
 4) In your setup(); function, call myServo.begin(); For each of your servos. This sets up your servos for use.
 5) In your loop(); function, add the line idle(); to the top. This runs everything that wants to be run in the background. Like these servos.
 6) To set a position, call the method myServo.setDeg(angle);. Your servo will begin to move to that position.
